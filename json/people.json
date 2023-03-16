@@ -1,0 +1,11 @@
+{
+    "name": "Emill Logroño",
+    "email": "lemito66@gmail.com",
+    "skills": [
+        "Python", "Javascript"
+    ],
+    "address": {
+        "city": "Logroño",
+        "country": "Spain"
+    }
+}
