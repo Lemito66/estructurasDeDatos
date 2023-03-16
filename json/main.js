@@ -18,3 +18,16 @@ fetch("https://jsonplaceholder.typicode.com/users")
     .then(data => data.json())
     .then(json => console.log(json))
     .catch(error => console.log(error));
+
+// Async await
+
+// esto de abajo se va a ejecutar inmediatamente
+
+(function(){
+    console.log('Emill');
+})();
+
+
+( async function(){
+    const dataResult = await fetch("https://jsonplaceholder.typicode.com/users"); // Siempre debo tener asyn y await para que funcione
+})();
