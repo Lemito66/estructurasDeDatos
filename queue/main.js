@@ -70,14 +70,14 @@ const add = () => {
 };
 
 const request = async () => {
-    while (!queueRequest.isEmpty()) {
-        const id = queueRequest.dequeue();
-        const response = await fetch(`${url}/${id}`);
-        const data = await response.json();
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        showRequest();
-        divResponse.innerHTML = `<p>${data.id} ${data.title}</p> ${divResponse.innerHTML}`;
-    }
+  while (!queueRequest.isEmpty()) {
+    const id = queueRequest.dequeue();
+    const response = await fetch(`${url}/${id}`);
+    const data = await response.json();
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    showRequest();
+    divResponse.innerHTML = `<p>${data.id} ${data.title}</p> ${divResponse.innerHTML}`;
+  }
 };
 
 showRequest = () => {
