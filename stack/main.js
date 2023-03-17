@@ -1,4 +1,5 @@
 // Implementación de pila
+// Último que entra, primero que sale (LIFO)
 
 class Stack {
 
