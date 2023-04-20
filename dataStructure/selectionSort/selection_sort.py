@@ -15,8 +15,9 @@ def selection_sort(list_of_numbers: list) -> list:
     for i in range(len(list_of_numbers)):
         minimum = i
         for j in range(i+1, len(list_of_numbers)):
-            if (list_of_numbers[j] < list_of_numbers[minimum]):
-                minimum = j
+            # if the current element is less than the minimum element
+            if (list_of_numbers[j] < list_of_numbers[minimum]): 
+                minimum = j # update the minimum element
         temp = list_of_numbers[i]
         list_of_numbers[i] = list_of_numbers[minimum]
         list_of_numbers[minimum] = temp
