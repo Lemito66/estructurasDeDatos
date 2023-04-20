@@ -1,6 +1,6 @@
 // Método de Selección
 
-const selectionSort = (arrayOfNumbers) => {
+const selectionSort = (arrayOfNumbers = []) => {
   const length = arrayOfNumbers.length;
   for (let index = 0; index < length; index++) {
     let min = index;
