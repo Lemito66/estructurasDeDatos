@@ -1,6 +1,6 @@
 // Método Burbuja
 
-const bubbleSort = (arrayOfNumbers) => {
+const bubbleSort = (arrayOfNumbers = []) => {
   let sorted = true;
   let temp;
   for (let i = 0; i < arrayOfNumbers.length; i++) {
