@@ -4,7 +4,7 @@ const bubbleSort = (arrayOfNumbers = []) => {
   let sorted = true;
   let temp;
   for (let i = 0; i < arrayOfNumbers.length; i++) {
-    for (let j = 0; j < arrayOfNumbers.length; j++) {
+    for (let j = 0; j < arrayOfNumbers.length -1; j++) {
       if (arrayOfNumbers[j] > arrayOfNumbers[j + 1]) {
         sorted = false;
         temp = arrayOfNumbers[j];
