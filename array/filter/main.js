@@ -14,4 +14,11 @@ const finLetterA  = (collection, letter) => {
     return collection.filter((name) => name[0].toUpperCase() === upperLetter);
 };
 
+const finalLetterA = (collection, letter) => {
+    const upperLetter = letter.toUpperCase();
+    return collection.filter((name) => name[name.length - 1].toUpperCase() === upperLetter);
+};
+
 console.log(finLetterA(nombres, 'a'));
+
+console.log(finalLetterA(nombres, 'a'));
