@@ -19,6 +19,13 @@ const finalLetterA = (collection, letter) => {
     return collection.filter((name) => name[name.length - 1].toUpperCase() === upperLetter);
 };
 
+const mapNumbers = (collection) => {
+    return collection.map((number) => number * 2);
+};
+
+
 console.log(finLetterA(nombres, 'a'));
 
 console.log(finalLetterA(nombres, 'a'));
+
+console.log(mapNumbers(numbers));
