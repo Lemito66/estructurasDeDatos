@@ -1,4 +1,4 @@
-// Letendo nuestro archivo json con el api fetch
+// Leyendo nuestro archivo json con el api fetch
 
 
 fetch("people.json")
