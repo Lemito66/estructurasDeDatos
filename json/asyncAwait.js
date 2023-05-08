@@ -40,7 +40,7 @@ const namesApi = async () => {
 })(); */
 
 
-const apiDjango = async () => {
+/* const apiDjango = async () => {
   
   try {
     const url = await fetch("http://127.0.0.1:8000/tasks/api/v1/tasks/");
@@ -49,12 +49,27 @@ const apiDjango = async () => {
   } catch (error) {
     console.log(error)
   }
+}; */
+
+const getWeight = async (number) => {
+  try {
+    const url = await fetch(`https://api.hospitalmetropolitano.org/t/v1/tr/formularios/sv?PARAM=PESO&CD_ATENDIMENTO=${number}`);
+    const data = await url.json();
+    return await data.data[0].VALUE;
+  } catch (error) {
+    console.log(error)
+  }
 };
 
 (async () => {
+  const result = await getWeight(10090);
+  console.log(result);
+})();
+
+/* (async () => {
   const result = await apiDjango();
   const onlyId = result.map(({ id }) => `Id: ${ id }`);
   for (const id of onlyId) {
     console.log(id);
   }
-})();
+})(); */
