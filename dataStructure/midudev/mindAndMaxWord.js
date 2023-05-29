@@ -6,18 +6,22 @@ Necesitamos que la función reciba un array de números, sin ordenar, y que devu
 */
 
 function minAndMaxWord(words) {
-    // tu código aquí
-    let min = words[0]
-    let max = words[0]
+  // tu código aquí
+  let min = words[0];
+  let max = words[0];
+  let minIndex = 0;
+  let maxIndex = 0;
 
-    for (const word of words) {
-        if (word > max) {
-            max = word
-        } else if( word < min){
-            min = word
-        }
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] > max) {
+      max = words[i];
+      maxIndex = i;
+    } else if (words[i] < min) {
+      min = words[i];
+      minIndex = i;
     }
-    return [min, max]
+  }
+  return [minIndex, maxIndex];
 }
 
-console.log(minAndMaxWord([5,2,0,10,6]));
+console.log(minAndMaxWord([5, 2, 0, 10, 6]));
