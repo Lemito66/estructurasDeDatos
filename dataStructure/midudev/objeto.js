@@ -42,7 +42,7 @@ exampleTwo.PRESCRIPCION.items.push({
 });
 
 let ChangeObject = {
-  "ESPIROMETRIA CON BRONCODILATADOR 1 VEZ AL DIA": true,
+  "ESPIROMETRIA CON BRONCODILATADOR 1 VEZ AL DIA": false,
   "ESPIROMETRIA SIMPLE 1 VEZ AL DIA": true,
   "LAVADO NASAL 2 VECES AL DIA": true,
 };
@@ -52,18 +52,14 @@ const change = (prescripcionAntes) => {
     PRESCRIPCIONANTES: prescripcionAntes,
     DATOS: [],
   };
-  /* Object.entries(prescripcionAntes).map(([nombre, seleccionado]) => {
-    newObject.DATOS.push({
-      nombre,
-      seleccionado,
-    });
-  }); */
-  for (const key in prescripcionAntes) {
-    newObject.DATOS.push({
-      nombre: key,
-      seleccionado: prescripcionAntes[key],
-    });
-  }
+  Object.entries(prescripcionAntes).forEach(([nombre, seleccionado]) => {
+    if (seleccionado === true) {
+      newObject.DATOS.push({
+        nombre,
+        seleccionado,
+      });
+    }
+  });
   return newObject;
 };
 
