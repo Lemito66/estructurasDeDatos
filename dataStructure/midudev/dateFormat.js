@@ -14,3 +14,16 @@ const cargarFechaActual = () => {
 }
 
 console.log(cargarFechaActual());
+
+const cargarHoraActual =  () => {
+    const fechaActual = new Date();
+    const hora = fechaActual.getHours();
+    const minutosNormal = fechaActual.getMinutes();
+    const minutos = minutosNormal < 10 ? `0${minutosNormal}` : minutosNormal;
+
+    const horaFormateada = `${hora}:${minutos}`;
+    return horaFormateada;
+    //console.log(FormularioDeRegistro.horaActual);
+}
+
+console.log(cargarHoraActual());
