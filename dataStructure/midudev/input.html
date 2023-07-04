@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Validar campo tipo number</title>
+  </head>
+  <body>
+    <label for="numberInput">Ingresa un número:</label>
+    <input type="number" id="input" />
+
+    <script>
+      const input = document.getElementById("input");
+
+      const invalidChars = ["-", "+", "e"];
+
+      input.addEventListener("keydown", function (e) {
+        if (invalidChars.includes(e.key)) {
+          e.preventDefault();
+        }
+      });
+      
+      input.addEventListener("paste", function (e) {
+        const clipboardData = e.clipboardData || window.clipboardData;
+        const pastedText = clipboardData.getData("text");
+
+        if (containsInvalidChars(pastedText)) {
+          e.preventDefault();
+        }
+      });
+
+      function containsInvalidChars(text) {
+        return invalidChars.some((char) => text.includes(char));
+      }
+    </script>
+  </body>
+</html>
