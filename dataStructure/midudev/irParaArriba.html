@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Volver arriba con JavaScript</title>
+  <style>
+    /* Estilos opcionales para el elemento de volver arriba */
+    #volverArriba {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contenido de la página</h1>
+  
+  <!-- Elemento para volver arriba -->
+  <div id="volverArriba">Volver arriba</div>
+
+  <form>
+    <label for="numero">Ingresa un número del 0 al 100:</label>
+    <input type="number" id="numero" name="numero" min="0" max="100">
+    <input type="submit" value="Enviar">
+  </form>
+  
+
+  <script>
+    // Obtén una referencia al elemento en el que se hará clic para volver arriba
+    var elementoVolverArriba = document.getElementById('volverArriba');
+
+    // Agrega un event listener al elemento
+    elementoVolverArriba.addEventListener('click', function() {
+      // Mueve el scroll hacia arriba
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Opcional: agrega suavidad a la animación del scroll
+      });
+    });
+  </script>
+</body>
+</html>
