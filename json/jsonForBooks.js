@@ -6,7 +6,7 @@ const readJson = async () => {
 
 (async () => {
     const data = await readJson();
-    console.log(data);
+    console.log(data.library);
 })();
 
 
